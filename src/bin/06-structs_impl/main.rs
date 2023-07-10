@@ -7,7 +7,7 @@ impl Product {
     // type: Vec<Product>
     fn list_products(products: &Vec<Product>) {
         for product in products {
-            println!("name: {}, price: {}", product.name, product.price);
+            println!("Name: {}, Price: {}", product.name, product.price);
         }
     }
     // type: [Product]
@@ -49,14 +49,27 @@ fn main() {
         price: 450.00,
     };
 
-    println!("========== List of Products ==========");
+    println!("========== List of Products: ==========");
     Product::list_products(&products);
 
     let total_price = Product::total_price(&products);
 
-    println!("========== Get Total Price ==========");
+    println!("========== Get Total Price: ==========");
     println!("Total price is: {}", total_price);
 
-    println!("========== Impl Product Name ==========");
-    product.name()
+    println!("========== Impl Product Name: ==========");
+    product.name();
+
+    let min_price = 250.00;
+    let max_price = 550.00;
+
+    let filtered_products: Vec<&Product> = products
+        .iter()
+        .filter(|product| product.price >= min_price && product.price <= max_price)
+        .collect();
+
+    println!("========== Filtered Product: ==========");
+    for product in filtered_products {
+        println!("Name: {}, Price: {}", product.name, product.price);
+    }
 }
