@@ -4,11 +4,13 @@ struct Product {
 }
 
 impl Product {
-    fn list_products(products: &[Product]) {
+    // type: Vec<Product>
+    fn list_products(products: &Vec<Product>) {
         for product in products {
             println!("name: {}, price: {}", product.name, product.price);
         }
     }
+    // type: [Product]
     fn total_price(products: &[Product]) -> f64 {
         let mut total = 0.00;
         for product in products {
@@ -16,6 +18,7 @@ impl Product {
         }
         return total;
     }
+    // use &self
     fn name(&self) {
         println!(
             "Name of product is: {}, and the length is: {}",
