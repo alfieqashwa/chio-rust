@@ -13,7 +13,7 @@ Rust has 4 (four) primary of Scalar types:
         (single-byte Unicode characters).
 */
 
-fn run() {
+pub fn run() {
     integers_example();
     println!("===================");
     floating_example();
@@ -67,8 +67,4 @@ fn my_quote(turtle: char, rabbit: char) {
         "I'd rather be a persistent {} than a sleeping {}",
         turtle, rabbit
     )
-}
-
-fn main() {
-    run()
 }

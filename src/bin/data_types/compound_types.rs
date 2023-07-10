@@ -3,7 +3,7 @@ Compound types can group multiple values into one type.
 Rust has two primitive compound types: tuples and arrays.
 */
 
-fn run() {
+pub fn run() {
     tuple_example();
     println!("===================");
     array_example();
@@ -82,8 +82,4 @@ fn array_example() {
         println!("COUNTDOWN {:?}", i);
         println!("HAPPY HOLIDAYS!");
     }
-}
-
-fn main() {
-    run()
 }
