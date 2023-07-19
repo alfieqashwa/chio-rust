@@ -45,3 +45,26 @@ fn main() {
     println!("========== Get Total Price ==========");
     println!("Total Price: {}", total_price);
 }
+
+#[cfg(test)]
+mod test {
+    // use crate::{products::Product, total_price};
+    use super::*;
+
+    #[test]
+    fn test_total_price() {
+        let products = vec![
+            Product {
+                name: String::from("juice"),
+                price: 700.00,
+            },
+            Product {
+                name: String::from("beer"),
+                price: 400.00,
+            },
+        ];
+
+        let result = total_price::run(&products);
+        assert_eq!(result, 1100.00);
+    }
+}

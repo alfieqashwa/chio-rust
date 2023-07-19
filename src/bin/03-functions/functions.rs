@@ -34,3 +34,32 @@ fn is_gt_50(num: u8) {
         println!("The sum is: {} and it's less than 50", num)
     }
 }
+
+#[test]
+fn test_fn_add() {
+    let result = add(4, 5);
+
+    assert_eq!(result, 9);
+}
+
+#[test]
+fn test_fn_minus() {
+    let result = minus(5, 6);
+
+    assert_eq!(result, 1);
+}
+
+#[test]
+fn test_fn_is_gt_50() {
+    fn gt_99(x: i32) -> bool {
+        if x > 99 {
+            true
+        } else {
+            false
+        }
+    }
+
+    let result = gt_99(99);
+
+    assert_eq!(result, false);
+}
