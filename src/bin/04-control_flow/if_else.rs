@@ -20,11 +20,9 @@ fn test_if_in_a_let_statement() {
     assert_eq!(number, 5);
     
 
-/*
-    must have the same type
-    if not, it will occur panic
-
-    e.g:
-    let number:u8 = if condition { "five" } else { "six" };
-*/
+// must have the same type
+//     if not, the panic will occur.
+//
+//     e.g:
+//     let number: u8 = if condition { "five" } else { "six" };
 }
