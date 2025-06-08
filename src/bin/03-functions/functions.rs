@@ -63,3 +63,16 @@ fn test_fn_is_gt_50() {
 
     assert_eq!(result, false);
 }
+
+/*
+    Note:
+    explicit return:
+    fn explicit_add(a:u32, b:u32) -> u32 {
+        return a + b;
+    }
+    inplisit return:
+
+    fn explicit_add(a:u32, b:u32) -> u32 {
+        a + b // <- no `return` & no `;` 
+    }
+ */

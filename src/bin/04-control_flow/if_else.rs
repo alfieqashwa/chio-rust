@@ -1,5 +1,5 @@
 pub fn fizzbuzz() {
-    for num in 1..=100 {
+    for num in 1..=33 {
         if num % (3 * 5) == 0 {
             println!("fizzbuzz")
         } else if num % 5 == 0 {
@@ -10,4 +10,21 @@ pub fn fizzbuzz() {
             println!("{}", num)
         }
     }
+}
+
+#[test]
+
+fn test_if_in_a_let_statement() {
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+    assert_eq!(number, 5);
+    
+
+/*
+    must have the same type
+    if not, it will occur panic
+
+    e.g:
+    let number:u8 = if condition { "five" } else { "six" };
+*/
 }

@@ -68,8 +68,10 @@ fn array_example() {
     println!("===================");
     println!("months in prettier output: {:#?}", months);
     println!("===================");
+
     let nums: [i32; 5] = [1, 2, 3, 4, 5];
     println!("nums: {:?}", nums);
+
     let a = [10; 5];
     println!("{:#?}", a);
 

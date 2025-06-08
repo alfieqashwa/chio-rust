@@ -9,3 +9,24 @@ The repository is a collection of files that summarize my learning journey with 
 ```bash
 cargo run 00-vars
 ```
+
+### The Stack & the Heap
+
+| Stack                                        | Heap                                  |
+| -------------------------------------------- | ------------------------------------- |
+| Fixed size, known at compile time            | Dynamic size                          |
+| Fast (direct access)                         | Slower (access via pointer)           |
+| No manual allocation needed                  | Requires allocation via allocator     |
+| Automatically cleaned up after function ends | Needs manual management via ownership |
+| Suitable for small & fixed-size data         | Suitable for large/dynamic data       |
+
+### Ownership Rules
+
+1. Each value in Rust has an owner.
+2. There can only be one owner at a time.
+3. When the owner goes out of scope, the value will be dropped.
+
+### The Rules of References
+
+1. At any given time, you can have either one mutable reference or any number of immutable references.
+2. References must always be valid.
