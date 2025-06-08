@@ -23,6 +23,8 @@ pub fn run() {
     println!("===================");
     character_example();
     println!("===================");
+    suffix_example();
+    println!("===================");
     let turtle = '🐢';
     let rabbit = '🐇';
     my_quote(turtle, rabbit);
@@ -61,6 +63,11 @@ fn character_example() {
     let character_example = '😻';
     assert_eq!(character_example, '😻');
     println!("character_example until shadowing is {}", character_example);
+}
+
+fn suffix_example() {
+    let suffix_numeric = 23u8;
+    println!("Suffix example: {suffix_numeric}")
 }
 
 fn my_quote(turtle: char, rabbit: char) {
