@@ -4,6 +4,7 @@ Rust has two primitive compound types: tuples and arrays.
 */
 
 pub fn run() {
+    println!("=== COMPOUND TYPES ===");
     tuple_example();
     println!("===================");
     array_example();
@@ -21,14 +22,20 @@ fn tuple_example() {
 
     // destructuring
     let cars = ("BMW", "Audi", "Mercedes");
-    let (car1, car2, car3) = cars;
-    println!("car1 is {}", car1);
-    println!("car2 is {}", car2);
-    println!("car3 is {}", car3);
+    let (bmw, audi, mercy) = cars;
+
+    assert_eq!(bmw, "BMW");
+    println!("first car is {}", bmw);
+
+    assert_eq!(audi, "Audi");
+    println!("second car is {}", audi);
+
+    assert_eq!(mercy, "Mercedes");
+    println!("third car is {}", mercy);
 
     let s = ("cello world", String::from("hello world"));
     println!(
-        "string literal example: {},\nstring object example: {}",
+        "string literal example: {}\nstring object example: {}",
         s.0, s.1
     );
 }
@@ -70,8 +77,15 @@ fn array_example() {
     println!("Vals: {:?}", vals);
 
     let eight = vals[2];
+    assert_eq!(8, eight);
+ 
+    // reference to a slice
     let six_to_nine = &vals[0..4];
-    let six_til_nine = &vals[0..=4];
+    assert_eq!(six_to_nine, &[6, 7, 8, 9]);
+
+    let six_til_nine = &vals[0..=4]; 
+    assert_eq!(six_til_nine, &[6, 7, 8, 9, 10]);
+
     println!(
         "eight: {},\nsix_to_nine: {:?}\nsix_til_nine: {:?}",
         eight, six_to_nine, six_til_nine
@@ -80,6 +94,6 @@ fn array_example() {
     let numbers = [1, 2, 3];
     for i in numbers.iter().rev() {
         println!("COUNTDOWN {:?}", i);
-        println!("HAPPY HOLIDAYS!");
     }
+    println!("HAPPY HOLIDAYS!");
 }

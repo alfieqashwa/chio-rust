@@ -14,6 +14,7 @@ Rust has 4 (four) primary of Scalar types:
 */
 
 pub fn run() {
+    println!("=== SCALAR TYPES ===");
     integers_example();
     println!("===================");
     floating_example();
