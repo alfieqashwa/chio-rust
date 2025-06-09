@@ -12,11 +12,21 @@ impl Product {
     }
     // type: [Product]
     fn total_price(products: &[Product]) -> f64 {
-        let mut total = 0.00;
-        for product in products {
-            total += product.price;
-        }
-        return total;
+        // approach 1: using a for loop
+
+        // let mut total = 0.00;
+        // for product in products {
+        //     total += product.price;
+        // }
+        // return total;
+
+        // approach 2: using iter and map
+        // products.iter().map(|product| product.price).sum()
+
+        // approach 3: using fold
+        products
+            .iter()
+            .fold(0.0, |total, product| total + product.price)
     }
     // use &self
     fn name(&self) {
@@ -60,16 +70,27 @@ fn main() {
     println!("========== Impl Product Name: ==========");
     product.name();
 
-    let min_price = 250.00;
-    let max_price = 550.00;
-
-    let filtered_products: Vec<&Product> = products
+    // Get product with minimum price
+    let min_product = products
         .iter()
-        .filter(|product| product.price >= min_price && product.price <= max_price)
-        .collect();
+        .min_by(|a, b| a.price.partial_cmp(&b.price).unwrap())
+        .unwrap(); // unwrap is used here for simplicity, but in production code, you should handle
+    // the case where there are no products.
 
-    println!("========== Filtered Product: ==========");
-    for product in filtered_products {
-        println!("Name: {}, Price: {}", product.name, product.price);
-    }
+    // Get product with maximum price
+    let max_product = products
+        .iter()
+        .max_by(|a, b| a.price.partial_cmp(&b.price).unwrap())
+        .unwrap();
+
+    println!("========== Min & Max Price Product ==========");
+
+    println!(
+        "Min Price Product: {}, Price: Rp{}",
+        min_product.name, min_product.price
+    );
+    println!(
+        "Max Price Product: {}, Price: Rp{}",
+        max_product.name, max_product.price
+    );
 }
