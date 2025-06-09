@@ -7,7 +7,7 @@ The repository is a collection of files that summarize my learning journey with 
 ### Running the Code
 
 ```bash
-cargo run 00-vars
+cargo run -q --bin 05-structs
 ```
 
 ### The Stack & the Heap
