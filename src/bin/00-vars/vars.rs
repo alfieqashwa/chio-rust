@@ -39,4 +39,8 @@ pub fn run() {
     let cello = cello.len(); // usize is an alias for u32
     assert_eq!(cello, 5);
     println!("The value of space is: {}", cello);
+    
+    let b = false;
+    let b = !b;
+
 }

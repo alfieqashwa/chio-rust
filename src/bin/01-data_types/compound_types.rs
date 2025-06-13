@@ -80,12 +80,12 @@ fn array_example() {
 
     let eight = vals[2];
     assert_eq!(8, eight);
- 
+
     // reference to a slice
     let six_to_nine = &vals[0..4];
     assert_eq!(six_to_nine, &[6, 7, 8, 9]);
 
-    let six_til_nine = &vals[0..=4]; 
+    let six_til_nine = &vals[0..=4];
     assert_eq!(six_til_nine, &[6, 7, 8, 9, 10]);
 
     println!(

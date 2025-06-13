@@ -5,6 +5,5 @@ pub fn run(products: &Vec<Product>) -> f64 {
     for product in products {
         total += product.price
     }
-
     total
 }
