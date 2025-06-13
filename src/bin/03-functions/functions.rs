@@ -52,27 +52,23 @@ fn test_fn_minus() {
 #[test]
 fn test_fn_is_gt_50() {
     fn gt_99(x: i32) -> bool {
-        if x > 99 {
-            true
-        } else {
-            false
-        }
+        x > 99
     }
 
     let result = gt_99(99);
 
-    assert_eq!(result, false);
+    assert!(!result);
 }
 
 /*
-    Note:
-    explicit return:
-    fn explicit_add(a:u32, b:u32) -> u32 {
-        return a + b;
-    }
-    inplisit return:
+   Note:
+   explicit return:
+   fn explicit_add(a:u32, b:u32) -> u32 {
+       return a + b;
+   }
+   inplisit return:
 
-    fn explicit_add(a:u32, b:u32) -> u32 {
-        a + b // <- no `return` & no `;` 
-    }
- */
+   fn explicit_add(a:u32, b:u32) -> u32 {
+       a + b // <- no `return` & no `;`
+   }
+*/
