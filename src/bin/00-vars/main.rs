@@ -1,4 +1,4 @@
 mod vars;
 fn main() {
-    vars::run()
+  vars::run()
 }

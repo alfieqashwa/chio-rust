@@ -14,65 +14,65 @@ Rust has 4 (four) primary of Scalar types:
 */
 
 pub fn run() {
-    println!("=== SCALAR TYPES ===");
-    integers_example();
-    println!("===================");
-    floating_example();
-    println!("===================");
-    boolean_example();
-    println!("===================");
-    character_example();
-    println!("===================");
-    suffix_example();
-    println!("===================");
-    let turtle = '🐢';
-    let rabbit = '🐇';
-    my_quote(turtle, rabbit);
+  println!("=== SCALAR TYPES ===");
+  integers_example();
+  println!("===================");
+  floating_example();
+  println!("===================");
+  boolean_example();
+  println!("===================");
+  character_example();
+  println!("===================");
+  suffix_example();
+  println!("===================");
+  let turtle = '🐢';
+  let rabbit = '🐇';
+  my_quote(turtle, rabbit);
 }
 
 fn integers_example() {
-    let unsigned_num: u16 = 1;
-    let unsigned_num = unsigned_num + 1_000;
-    assert_eq!(unsigned_num, 1001);
-    println!("unsigned_num is {}", unsigned_num);
+  let unsigned_num: u16 = 1;
+  let unsigned_num = unsigned_num + 1_000;
+  assert_eq!(unsigned_num, 1001);
+  println!("unsigned_num is {}", unsigned_num);
 
-    let signed_num: i16 = -1;
-    let signed_num = signed_num - 1_000;
-    assert_eq!(signed_num, -1001);
-    println!("signed_num is {}", signed_num);
+  let signed_num: i16 = -1;
+  let signed_num = signed_num - 1_000;
+  assert_eq!(signed_num, -1001);
+  println!("signed_num is {}", signed_num);
 }
 
 fn floating_example() {
-    let float_num: f32 = 1.5;
-    let float_num = float_num + 1.5;
-    assert_eq!(float_num, 3.0);
-    println!("float_num is {}", float_num);
+  let float_num: f32 = 1.5;
+  let float_num = float_num + 1.5;
+  assert_eq!(float_num, 3.0);
+  println!("float_num is {}", float_num);
 }
 
 fn boolean_example() {
-    let is_true: bool = true;
-    let is_true = !is_true;
-    assert_eq!(is_true, false);
-    println!("Is the value is true? {}", is_true);
+  let is_true: bool = true;
+  let is_true = !is_true;
+  assert_eq!(is_true, false);
+  println!("Is the value is true? {}", is_true);
 }
 
 fn character_example() {
-    let character_example: char = 'c';
-    assert_eq!(character_example, 'c');
-    println!("The character_example is {}", character_example);
-    let character_example = '😻';
-    assert_eq!(character_example, '😻');
-    println!("character_example until shadowing is {}", character_example);
+  let character_example: char = 'c';
+  assert_eq!(character_example, 'c');
+  println!("The character_example is {}", character_example);
+  let character_example = '😻';
+  assert_eq!(character_example, '😻');
+  println!("character_example until shadowing is {}", character_example);
 }
 
 fn suffix_example() {
-    let suffix_numeric = 23u8;
-    println!("Suffix example: {suffix_numeric}")
+  let suffix_numeric = 23u8;
+  println!("Suffix example: {suffix_numeric}")
 }
 
 fn my_quote(turtle: char, rabbit: char) {
-    println!(
-        "I'd rather be a persistent {} than a sleeping {}",
-        turtle, rabbit
-    )
+  println!(
+    "I'd rather be a persistent {} than a sleeping {}",
+    turtle, rabbit
+  )
 }

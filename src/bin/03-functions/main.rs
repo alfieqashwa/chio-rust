@@ -1,5 +1,5 @@
 mod functions;
 
 fn main() {
-    functions::run();
+  functions::run();
 }
