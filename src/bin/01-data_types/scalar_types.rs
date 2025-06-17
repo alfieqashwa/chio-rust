@@ -52,7 +52,7 @@ fn floating_example() {
 fn boolean_example() {
   let is_true: bool = true;
   let is_true = !is_true;
-  assert_eq!(is_true, false);
+  assert!(!is_true);
   println!("Is the value is true? {}", is_true);
 }
 

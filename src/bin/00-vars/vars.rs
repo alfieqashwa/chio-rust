@@ -41,5 +41,5 @@ pub fn run() {
   println!("The value of space is: {}", cello);
 
   let b = false;
-  let b = !b;
+  assert!(!b);
 }
