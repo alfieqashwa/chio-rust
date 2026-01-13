@@ -20,9 +20,3 @@ pub fn get_music_instruments() -> Vec<Product> {
 
   vec![guitar, piano, drum]
 }
-
-#[derive(Debug)]
-pub struct Computer {
-  pub name: String,
-  pub price: i32,
-}
