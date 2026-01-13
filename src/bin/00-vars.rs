@@ -1,4 +1,4 @@
-pub fn run() {
+fn main() {
   // variables are immutable by default
   let im = 4;
   println!("Variable im is {}", im);
