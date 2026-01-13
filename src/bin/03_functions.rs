@@ -1,4 +1,4 @@
-pub fn run() {
+fn main() {
   let (num1, num2) = (33, 19);
 
   let sum1 = add(num1, num2);

@@ -1,4 +1,4 @@
-pub fn run() {
+fn main() {
   println!("While loop example");
   let mut number = 3;
   while number != 0 {

@@ -1,4 +1,4 @@
-pub fn run() {
+fn main() {
   println!("Loop example");
 
   let mut counter = 0;

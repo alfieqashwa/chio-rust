@@ -1,4 +1,4 @@
-pub fn fizzbuzz() {
+fn fizzbuzz() {
   for num in 1..=33 {
     match (num % 3, num % 5) {
       (0, 0) => println!("fizzbuzz"),
@@ -7,4 +7,8 @@ pub fn fizzbuzz() {
       _ => println!("{}", num),
     }
   }
+}
+
+fn main() {
+  fizzbuzz();
 }

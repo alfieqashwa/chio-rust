@@ -13,7 +13,7 @@ Rust has 4 (four) primary of Scalar types:
         (single-byte Unicode characters).
 */
 
-pub fn run() {
+fn main() {
   println!("=== SCALAR TYPES ===");
   integers_example();
   println!("===================");

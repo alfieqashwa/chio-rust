@@ -1,4 +1,4 @@
-pub fn fizzbuzz() {
+fn fizzbuzz() {
   for num in 1..=33 {
     if num % (3 * 5) == 0 {
       println!("fizzbuzz")
@@ -10,6 +10,10 @@ pub fn fizzbuzz() {
       println!("{}", num)
     }
   }
+}
+
+fn main() {
+  fizzbuzz();
 }
 
 #[test]
