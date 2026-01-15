@@ -44,6 +44,12 @@ fn main() {
   let total_age: u32 = initial_data.iter().fold(0, |acc, child| acc + child.age);
   println!("Total age: {}", total_age);
 
+  /*
+   * Another apporach more Rustacean way.
+   * let total_age: u32 = initial_data.iter().map(|child| child.age).sum();
+   * println!("Total age: {}", total_age);
+   */
+
   let update_data: Vec<Children> = initial_data
     .into_iter()
     .map(|mut child| {
