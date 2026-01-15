@@ -1,3 +1,11 @@
+fn main() {
+  println!("=== CONTROL FLOW ===\n");
+  println!("\n=== IF ELSE ===\n");
+  fizzbuzz();
+  println!("\n=== MATCH ===\n");
+  fizzbuzz_match();
+}
+
 fn fizzbuzz() {
   for num in 1..=33 {
     if num % (3 * 5) == 0 {
@@ -12,8 +20,15 @@ fn fizzbuzz() {
   }
 }
 
-fn main() {
-  fizzbuzz();
+fn fizzbuzz_match() {
+  for num in 1..=33 {
+    match (num % 3, num % 5) {
+      (0, 0) => println!("fizzbuzz"),
+      (0, _) => println!("fizz"),
+      (_, 0) => println!("buzz"),
+      _ => println!("{:}", num),
+    }
+  }
 }
 
 #[test]

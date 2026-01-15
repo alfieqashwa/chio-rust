@@ -28,6 +28,7 @@ impl Rectangle {
 }
 
 fn main() {
+  println!("\n=== METHODS PARAMETERS ===\n");
   let rect1 = Rectangle {
     width: 30,
     height: 50,
@@ -55,5 +56,11 @@ fn main() {
 
   // print square method
   let sq = Rectangle::square(20);
-  println!("Square {:#?}", sq);
+  println!("Square of 20 is {:#?}", sq.width * sq.height);
+
+  assert_eq!(rect1.width(), true);
+  assert_eq!(rect1.area(), 1500);
+  assert_eq!(rect1.can_hold(&rect2), true);
+  assert_eq!(rect1.can_hold(&rect3), false);
+  assert_eq!(sq.width * sq.height, 400);
 }

@@ -11,23 +11,22 @@ fn main() {
 
   is_gt_50(sum2);
 
+  let sum3 = minus(31, 57);
+  println!("The sum of 31 minus 57 is: {}", sum3);
+
   assert_eq!(sum1, 52);
   assert_eq!(sum2, 14);
 }
 
-// u8 = 0..255
-fn add(num1: u8, num2: u8) -> u8 {
+fn add(num1: i32, num2: i32) -> i32 {
   num1 + num2
 }
-fn minus(num1: u8, num2: u8) -> u8 {
-  match num1 >= num2 {
-    true => num1 - num2,
-    false => num2 - num1,
-  }
+fn minus(num1: i32, num2: i32) -> i32 {
+  num1 - num2
 }
 
 // is greater than 50 ?
-fn is_gt_50(num: u8) {
+fn is_gt_50(num: i32) {
   if num > 50 {
     println!("The sum is: {} an it's greater than 50", num)
   } else {

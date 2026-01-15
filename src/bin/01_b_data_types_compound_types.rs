@@ -4,9 +4,11 @@ Rust has two primitive compound types: tuples and arrays.
 */
 
 fn main() {
-  println!("=== COMPOUND TYPES ===");
+  println!("=== COMPOUND TYPES ===\n");
+  println!("=== TUPLE EXAMPLE ===\n");
   tuple_example();
-  println!("===================");
+  println!("===================\n");
+  println!("=== ARRAY EXAMPLE ===\n");
   array_example();
 }
 
@@ -18,7 +20,7 @@ fn main() {
 
 fn tuple_example() {
   let tuple: (char, u8, bool, f32) = ('a', 1, true, 19.31);
-  println!("tuple is {:?}", tuple);
+  println!("tuple : {:?}", tuple);
 
   // destructuring
   let cars = ("BMW", "Audi", "Mercedes");
@@ -38,6 +40,9 @@ fn tuple_example() {
     "string literal example: {}\nstring object example: {}",
     s.0, s.1
   );
+  assert_ne!(s.0, s.1);
+  assert_eq!(s.0, "cello world");
+  assert_eq!(s.1, "hello world");
 }
 
 /*
@@ -65,9 +70,9 @@ fn array_example() {
     "December",
   ];
   println!("months: {:?}", months);
-  println!("===================");
+  println!("\n===================\n");
   println!("months in prettier output: {:#?}", months);
-  println!("===================");
+  println!("\n===================\n");
 
   let nums: [i32; 5] = [1, 2, 3, 4, 5];
   println!("nums: {:?}", nums);
@@ -97,5 +102,5 @@ fn array_example() {
   for i in numbers.iter().rev() {
     println!("COUNTDOWN {:?}", i);
   }
-  println!("HAPPY HOLIDAYS!");
+  println!("\nHAPPY HOLIDAYS!\n");
 }

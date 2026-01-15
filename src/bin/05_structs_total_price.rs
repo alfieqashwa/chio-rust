@@ -10,5 +10,10 @@ fn total(products: &Vec<Product>) -> f64 {
 
 fn main() {
   let instruments = get_music_instruments();
-  total(&instruments);
+  let total_price = total(&instruments);
+
+  println!(
+    "\nTotal price of {:#?} is Rp.{}\n",
+    instruments, total_price
+  );
 }

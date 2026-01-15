@@ -14,17 +14,18 @@ Rust has 4 (four) primary of Scalar types:
 */
 
 fn main() {
-  println!("=== SCALAR TYPES ===");
+  println!("=== SCALAR TYPES ===\n");
+  println!("\n=== INTEGER EXAMPLE ===\n");
   integers_example();
-  println!("===================");
+  println!("\n=== FLOAT EXAMPLE ===\n");
   floating_example();
-  println!("===================");
+  println!("\n=== BOOLEAN EXAMPLE ===\n");
   boolean_example();
-  println!("===================");
+  println!("\n=== CHARACTER EXAMPLE ===\n");
   character_example();
-  println!("===================");
+  println!("\n=== SUFFIX EXAMPLE ===\n");
   suffix_example();
-  println!("===================");
+  println!("\n=== MY QUOTE ===\n");
   let turtle = '🐢';
   let rabbit = '🐇';
   my_quote(turtle, rabbit);
@@ -67,12 +68,12 @@ fn character_example() {
 
 fn suffix_example() {
   let suffix_numeric = 23u8;
-  println!("Suffix example: {suffix_numeric}")
+  println!("Suffix example: 23u8 -> {suffix_numeric}")
 }
 
 fn my_quote(turtle: char, rabbit: char) {
   println!(
-    "I'd rather be a persistent {} than a sleeping {}",
-    turtle, rabbit
+    "I'd rather be a persistent {1} than a sleeping {0}",
+    rabbit, turtle
   )
 }

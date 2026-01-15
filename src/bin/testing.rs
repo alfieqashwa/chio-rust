@@ -1,35 +1,63 @@
-#[derive(Debug)]
-#[allow(dead_code)]
-struct User {
-  username: String,
-  email: String,
-  age: u32,
-  is_active: bool,
+#[derive(Debug, PartialEq)]
+enum Gender {
+  MALE,
+  FEMALE,
 }
-
-fn build_user(username: String, email: String, age: u32) -> User {
-  User {
-    username,
-    email,
-    age,
-    is_active: true,
-  }
+#[derive(Debug)]
+struct Children {
+  name: String,
+  age: u32,
+  gender: Gender,
 }
 
 fn main() {
-  let user1 = User {
-    username: String::from("Alfie Qashwa"),
-    email: String::from("alfieqashwa@gmail.com"),
-    age: 42,
-    is_active: true,
+  let first_child = Children {
+    name: "Qashwa Zhafira".to_string(),
+    age: 14,
+    gender: Gender::FEMALE,
   };
 
-  let update_user = build_user(
-    "Qashwa Zhafira".to_owned(),
-    "zhafira.qashwa@gmail.com".to_owned(),
-    11,
-  );
-  println!("{:#?}", user1);
+  let second_child = Children {
+    name: "Cello El Zhafran".to_string(),
+    age: 8,
+    gender: Gender::MALE,
+  };
 
-  println!("update user: {:#?}", update_user);
+  let third_child = Children {
+    name: String::from("Chio El Zhafi"),
+    age: 2,
+    gender: Gender::MALE,
+  };
+
+  let initial_data = [first_child, second_child, third_child];
+
+  // println!("Initial Data: {:#?}", initial_data);
+
+  // for mut child in initial_data {
+  //   child.age += 5;
+  //   println!(
+  //     "Name: {}, Age: {}, Gender: {:#?}",
+  //     child.name, child.age, child.gender
+  //   )
+  // }
+
+  let total_age: u32 = initial_data.iter().fold(0, |acc, child| acc + child.age);
+  println!("Total age: {}", total_age);
+
+  let update_data: Vec<Children> = initial_data
+    .into_iter()
+    .map(|mut child| {
+      child.age += 5;
+      child
+    })
+    .collect();
+
+  let filtered_data: Vec<Children> = update_data
+    .into_iter()
+    .filter(|child| child.gender == Gender::FEMALE)
+    .collect();
+
+  for Children { name, age, gender } in filtered_data {
+    println!("Name: {}, Age: {}, Gender: {:?}", name, age, gender);
+  }
 }
