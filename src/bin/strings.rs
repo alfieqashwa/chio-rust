@@ -12,6 +12,16 @@ fn main() {
 
   let cello = "cello";
 
+  // Fold way
+  // let total_bytes: u32 = cello
+  //   .as_bytes()
+  //   .iter()
+  //   .fold(0, |acc, &byte| acc + byte as u32);
+
+  let total_bytes: u32 = cello.as_bytes().iter().map(|&b| b as u32).sum();
+
+  assert_eq!(total_bytes, 527);
+  assert_eq!(cello.as_bytes(), [99, 101, 108, 108, 111]);
+
   println!("{:?}", cello.chars());
-  println!("{:?}", cello.as_bytes());
 }
